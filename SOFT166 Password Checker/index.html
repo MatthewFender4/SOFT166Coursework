@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Strength Checker</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+	<!--- JavaScript src reference goes here -->
+  </head>
+  <body>
+    <!-- On small screen Navbar will change to vertical -->
+    <nav class="navbar navbar-expand-sm fixed-top bg-light">
+      <!-- Page Navigation Links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="About.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Overview.html">Overview</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="HueLightsKey.html">Hue-Lights-Key</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Page heading-->
+    <h1 class="text-center text-primary m-5 p-3">Password Strength Tester</h1>
+
+    <!-- I want to Provide a suitable overview to enable the strength checker to be used without jumping to the other pages,
+	improves usability -->
+    <div class="jumbotron">
+      <h1 class="display-5 text-primary text-center">
+        Using this Password Strength Tester
+      </h1>
+      <p class="lead">
+        To determine the strength of your password just type it in
+        below. If it is a strong password you will see 6 green indicators and
+        the oveall status will also be green. Note: Even if your password achieves the basic
+        criteria it may still be a poor password if it includes common
+        every day words!
+      </p>
+      <!--- Include a break line-->
+      <hr class="my-4" />
+      <p>
+        To pass the first 4 tests your password MUST be at least 8 characters
+        long and it must contain at least one Capital letter, one lower case
+        letter and one special character from the set: # ? ! $ £ % & _ ( ) [ ] ,
+        . / + - For the final test the checker will compare your password
+        against sets of common words including: boys and girls names and pet
+        names. Your target is to achieve a password Strength of 7.
+      </p>
+      <p class="lead text-info">
+        Important: This password strength tester also feeds its output to a set
+        of Hue Lights which also indicate the quality of your password.
+      </p>
+      <p class="lead text-center">
+        <a class="btn btn-info btn-lg" href="About.html" role="button"
+          >Learn more</a
+        >
+      </p>
+    </div>
+    
+    <!-- Fluid Container used to display local response next to the password input -->
+    <!-- These will realign to be above one another on small screen-->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-6">
+          <h2 class="text-center">PASSWORD: input</h2>
+    <!-- Using a Form with a plain language input for the password -->
+    <!---using a password input filed hides the characters; bad for usability -->
+    <!-- JavaScript method to check the password against the criteria to be called below-->
+          <form>
+            <div class="form-group">
+              <label>Password Plain Text:</label>
+              <input
+                type="text"
+                placeholder="Type your password in here"
+                spellcheck="false"
+                class="form-control"
+              />
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-6">
+          <div class="card border-dark mb-3" style="max-width: 34rem;">
+            <div class="card-header  text-center text-dark" id="strengthHeader">
+              Overall Password Status
+            </div>
+            <div class="card-body text-dark">
+              <h5 class="card-title text-center">
+                Progressive Password Status
+              </h5>
+              <!--Badges are being used to display the password status locally-->
+              <!-- Initially all are RED until the password is being entered-->
+              <!-- Then each badge colour will represent one factor of password strength-->
+              <span class="badge badge-danger" id="lowerCheck">Lower Case</span>
+              <span class="badge badge-danger" id="upperCheck">Upper Case</span>
+              <span class="badge badge-danger" id="numberCheck">Number</span>
+              <span class="badge badge-danger" id="specialCheck"
+                >Special Char</span
+              >
+              <span class="badge badge-danger" id="lenCheck">Length</span>
+              <span class="badge badge-danger" id="commonCheck">Common</span>
+              <span class="badge badge-danger" id="passwordStrength"
+                >STRENGTH</span
+              >
+              <!-- As the password is input this text will change to reflect the password status in text form-->
+              <p class="card-text" id="strengthComment">
+                Please improve this password! Please note this text will change
+                as you enter your password.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
