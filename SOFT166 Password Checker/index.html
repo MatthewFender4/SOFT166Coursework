@@ -11,7 +11,7 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
-	<!--- JavaScript src reference goes here -->
+	<script src="ControlAndLights.js"></script>
   </head>
   <body>
     <!-- On small screen Navbar will change to vertical -->
@@ -85,6 +85,7 @@
               <input
                 type="text"
                 placeholder="Type your password in here"
+				oninput="passwordCheck(this.value);"
                 spellcheck="false"
                 class="form-control"
               />
