@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!--- No JS file used for this page -->
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm fixed-top bg-light">
+      <!-- Links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="About.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Overview.html">Overview</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="HueLightsKey.html">Hue-Lights-Key</a>
+        </li>
+      </ul>
+    </nav>
+
+    <h1 class="text-center text-primary m-5 p-3">
+      Password Checker Application Overview
+    </h1>
+
+    <container Class="text-left ">
+      <h5 class="m-4">
+        The Password Strength Checker overall process is described by the flow
+        diagram below. Whenever the Home page is accessed the Password Strength
+        Checker becomes active with the password input initally set to null.
+        Before any input from the user the system accesses the Hue Lights and
+        sets all 6 to ON with a hue of RED (65536)
+      </h5>
+      <p class=" lead m-4">
+        Once the user starts to enter a password, each time a character is added
+        or deleted the checker runs through all of its processes to check the
+        strength of the current password. So as each character is added the
+        light pattern may change as the password grows in strength.
+      </p>
+      <p class="lead m-4">
+        The Hue Lights Key page shows what the light patterns mean. As can be
+        seen from the flow diagram the system checks the password for:
+      </p>
+      <ul class=" lead m-4">
+        <li>
+          Contains lower case character (Green if YES; RED if NOT)- Light 1
+        </li>
+        <li>
+          Contains upper case character (Green if YES; RED if NOT)- Light 2
+        </li>
+        <li>Contains a numeral (Green if YES; RED if NOT) - Light 3</li>
+        <li>
+          Contains a special character (Green if YES; RED if NOT) - Light 4
+        </li>
+        <li>
+          Is at least 8 chars long (Green if YES; Yellow if 6 or 7, Red if 5 or
+          fewer chars) - Light 5
+        </li>
+        <li>
+          Overall status including a check for common password names (Green,
+          Yellow or Red depending on Strength count) - Light 6
+        </li>
+      </ul>
+
+      <p class="lead m-4">
+        As the Hue lights may not always be present a local Strength Status
+        Checker has been included beside the password input on the Home page to
+        show the expected Hue Lights output.
+      </p>
+
+      <h3 class=" text-center m-1">The Local Strength Indicator</h3>
+      <div class="text-center">
+        <img
+          class="rounded "
+          src="Resources/PasswordStatus.png"
+          alt="Password Status"
+          height="300"
+          width="400"
+        />
+      </div>
+    </container>
+
+    <h3 class=" text-center m-2">The Process Flow Diagram</h3>
+
+    <!-- Added a pdf using embed tag-->
+    <div class="text-center">
+      <embed
+        src="Resources/HLFDiagram.pdf"
+        width="800"
+        height="1200"
+        alt="Flow Diagram PDF"
+      />
+    </div>
+  </body>
+</html>
