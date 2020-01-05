@@ -38,9 +38,9 @@
       system employs one final coloured light which will be green if the
       password has passed all tests and red if the password has failed overall.
       Please note that the tests for lowerCase, upperCase, numeral and
-      special-character are binary so need only use a white light with off for
-      character not present and on if the character is present. Password length
-      and overall use coloured lights with red, yellow and green.
+      special-character are binary so need only a red hue if the 
+      character is not present and a green hue if the character is present. Password length
+      and password overall strength use coloured lights with red, yellow and green.
     </p>
    
     <h5 class="text-primary  pl-5">
@@ -52,6 +52,7 @@
       The Criteria and Results Key after password input
     </h2>
     
+    <!-- Create a standard bootstrap 4 column table with a dark heading-->
     <div class="container">      
     <table class="table  table-bordered table-striped">
       <thead class="thead-dark" >
@@ -102,7 +103,7 @@
       </tbody>
     </table>
     <p>
-      As each required element is included in the password the strength of the password improves, with length and inclusion of a common word having the most significant impact on the passowrd strength.
+      As each required element is included in the password the strength of the password improves, with length and inclusion of a common word having the most significant impact on the password strength.
     </p>
     
   </div>
@@ -111,6 +112,7 @@
     Hue Light output for sample Passwords
   </h3>
 
+  <!-- Create an 8 column table and use 6 columns to show hue light status-->
   <div class="container">      
     <table class="table text-center table-bordered">
       <thead class="thead-light" >
