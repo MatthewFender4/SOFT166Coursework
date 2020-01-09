@@ -6,7 +6,7 @@ SOFT166 Practical Submission
 This repository contains the software for a web based password strength checker.
 The checker uses a REST API to connect with
 a set of Hue Lights. The output from the lights (as well as local indicators on the webpage) indicates the password strength as described below.
-# Application Overview
+# Application Fact Sheet
 ### The password strength checker application consists of 4 HTML pages:
 * index.html The principal page which contains the password checker.
 * About.html Which provides a basic overview of the site as well as the who and the what.
@@ -51,7 +51,20 @@ The page includes a feedback coloured button for each of the Hue Lights. (3) Eac
 some text feedback so the user can address any issues detected and improve the password.
 
 ## Video
+Here is a 2 minute video demonstrating the functionality of the website.
+
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=_YMsfyqdneU
 " target="_blank"><img src="http://img.youtube.com/vi/_YMsfyqdneU/0.jpg"  
 alt="Video Not Found" width="240" height="180" border="10" /></a>
+
 ## Screenshots
+Screenshots demonstrating the website in 3 different browsers
+
+### Microsoft Edge
+<img src="https://github.com/MatthewFender4/SOFT166Coursework/blob/master/images/websiteEdge.png" /></img>
+
+### Firefox
+<img src="https://github.com/MatthewFender4/SOFT166Coursework/blob/master/images/websiteFirefox.png" /></img>
+
+### Google Chrome
+<img src="https://github.com/MatthewFender4/SOFT166Coursework/blob/master/images/websiteChrome.png" /></img>
