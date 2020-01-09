@@ -51,4 +51,7 @@ The page includes a feedback coloured button for each of the Hue Lights. (3) Eac
 some text feedback so the user can address any issues detected and improve the password.
 
 ## Video
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=_YMsfyqdneU
+" target="_blank"><img src="http://img.youtube.com/vi/_YMsfyqdneU/0.jpg"  
+alt="Video Not Found" width="240" height="180" border="10" /></a>
 ## Screenshots
