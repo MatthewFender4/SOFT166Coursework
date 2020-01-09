@@ -270,8 +270,8 @@ function doOverallStrength(inputStr) {
 
 function getLightURI(lightNum) {
   //using home Hue lights for testing
-  var IP = "http://192.168.0.17/api/"; //!!!! Change this back to http://192.168.0.50/api/
-  var username = "xME26iv6t6YwFvx26rRmOkxU4a5MuwZGuXztilX0"; // !!!!!! Change back to "stlaB2I6VZ8O80Qepc-1xfmLrHgyTFvB9IGupaQz" when back in the labs;
+  var IP = "http://192.168.0.50/api/"; //!!!! Changed back to http://192.168.0.50/api/
+  var username = "stlaB2I6VZ8O80Qepc-1xfmLrHgyTFvB9IGupaQz"; // !!!!!! Changed back to "stlaB2I6VZ8O80Qepc-1xfmLrHgyTFvB9IGupaQz" for submission;
   var lights = "/lights/";
   var URI = IP + username + lights;
   return URI + lightNum + "/";
